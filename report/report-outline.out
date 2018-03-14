@@ -1,0 +1,46 @@
+\BOOKMARK [1][-]{section.1}{System Overview \(75 pts\)}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Net-Thread}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Internal request queue}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Pool of worker threads}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Main Loop of the Worker}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Initialization and opening and closing connections}{subsection.1.3}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Request Pre-Processing}{subsection.1.3}% 7
+\BOOKMARK [3][-]{subsubsection.1.3.4}{Request Post-Processing}{subsection.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.4}{Instrumentation infrastructure}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Execution Logger}{subsection.1.4}% 10
+\BOOKMARK [3][-]{subsubsection.1.4.2}{Logger for timings and queue size}{subsection.1.4}% 11
+\BOOKMARK [3][-]{subsubsection.1.4.3}{Logger for request and load counters}{subsection.1.4}% 12
+\BOOKMARK [2][-]{subsection.1.5}{Shut-Down thread}{section.1}% 13
+\BOOKMARK [2][-]{subsection.1.6}{General Experimental Settings}{section.1}% 14
+\BOOKMARK [1][-]{section.2}{Baseline without Middleware \(75 pts\)}{}% 15
+\BOOKMARK [2][-]{subsection.2.1}{One Server}{section.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Explanation}{subsection.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.2}{Two Servers}{section.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Explanation}{subsection.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.3}{Summary}{section.2}% 20
+\BOOKMARK [1][-]{section.3}{Baseline with Middleware \(90 pts\)}{}% 21
+\BOOKMARK [2][-]{subsection.3.1}{One Middleware}{section.3}% 22
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Explanation}{subsection.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.2}{Two Middlewares}{section.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Explanation}{subsection.3.2}% 25
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Two middlewares with 2 client VMs}{subsection.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.3}{Summary}{section.3}% 27
+\BOOKMARK [1][-]{section.4}{Throughput for Writes \(90 pts\)}{}% 28
+\BOOKMARK [2][-]{subsection.4.1}{Full System}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Explanation}{subsection.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.2}{Summary}{section.4}% 31
+\BOOKMARK [1][-]{section.5}{Gets and Multi-gets \(90 pts\)}{}% 32
+\BOOKMARK [2][-]{subsection.5.1}{Sharded Case}{section.5}% 33
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Explanation}{subsection.5.1}% 34
+\BOOKMARK [2][-]{subsection.5.2}{Non-sharded Case}{section.5}% 35
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Explanation}{subsection.5.2}% 36
+\BOOKMARK [2][-]{subsection.5.3}{Histogram}{section.5}% 37
+\BOOKMARK [2][-]{subsection.5.4}{Summary}{section.5}% 38
+\BOOKMARK [1][-]{section.6}{2K Analysis \(90 pts\)}{}% 39
+\BOOKMARK [1][-]{section.7}{Queuing Model \(90 pts\)}{}% 40
+\BOOKMARK [2][-]{subsection.7.1}{M/M/1}{section.7}% 41
+\BOOKMARK [2][-]{subsection.7.2}{M/M/m}{section.7}% 42
+\BOOKMARK [2][-]{subsection.7.3}{Network of Queues}{section.7}% 43
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Network of Queues with 1 middleware}{subsection.7.3}% 44
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Network of Queues with 2 middleware}{subsection.7.3}% 45
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Conclusion}{subsection.7.3}% 46

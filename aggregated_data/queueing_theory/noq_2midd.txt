@@ -1,0 +1,11 @@
+COMMAND TYPE = _S1-G0
+For workers = 8 mu = 0.00208475077866 nt = 1.16611293403e-05 per service.
+For workers = 16 mu = 0.00220930615765 nt = 1.130454852e-05 per service.
+For workers = 32 mu = 0.00368372298013 nt = 1.37962619998e-05 per service.
+For workers = 64 mu = 0.00576204411117 nt = 1.57211379186e-05 per service.
+COMMAND TYPE = _S0-G1
+For workers = 8 mu = 0.0013177911319 nt = 3.23376463134e-06 per service.
+For workers = 16 mu = 0.00239303845987 nt = 3.04879068983e-06 per service.
+For workers = 32 mu = 0.00486298886829 nt = 3.46911687973e-06 per service.
+For workers = 64 mu = 0.00704487194858 nt = 3.42745469299e-06 per service.
+

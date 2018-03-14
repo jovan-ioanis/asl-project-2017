@@ -1,11 +1,13 @@
 # Advanced Systems Lab - Fall 2017
 
+This repository contains middleware source code, aggregated data, final plots, bash scripts for running the system on Azure, Python scripts to extract aggregated data from raw data and Mathlab code for Queueing models.
+
 author: **Jovan Nikolic**
+
 **ETH**, Zurich, Switzerland
 
-This repository contains code for project of Advanced System Lab course of ETH, Zurich.
-
 **Final report** is available [here](https://github.com/jovan-ioanis/asl-project-2017/blob/master/report.pdf).
+
 **Project description** is available [here](https://github.com/jovan-ioanis/asl-project-2017/blob/master/project-description.pdf).
 
 ## Organization of data, scripts and plots
@@ -29,7 +31,7 @@ In `baseline_nomidd_1server` the following naming convention applies:
 
 - `json_output_file_cpt_`**X**`_rep`**Y**`_`**ZZZZ**`_vm`**N**`.json` represents output file of memtier instance, where **X** is number of virtual clients per thread at memtier, **Y** is repetition number = {1, 2, 3}, **ZZZZ** is `S0-G1` for read-only load and `S1-G0` for write-only load, **N** is virtual machine id = {1, 2, 3}.
 
-- `dstat_`__*machine*__N`_cpt`**X**`_rep`**Y**`_`**S**`.csv` represents output file of `dstat` tool, where __*machine*__ = {"memtier", "memcached"}, **N** is id of machine instance, **X** is number of virtual clients per thread at memtier, **Y** is repetition number = {1, 2, 3} and **S** is "r" for read-only and "w" for write-only. Ping results are identified in similar way.
+- `dstat_`__*machine*__**N**`_cpt`**X**`_rep`**Y**`_`**S**`.csv` represents output file of `dstat` tool, where __*machine*__ = {"memtier", "memcached"}, **N** is id of machine instance, **X** is number of virtual clients per thread at memtier, **Y** is repetition number = {1, 2, 3} and **S** is "r" for read-only and "w" for write-only. Ping results are identified in similar way.
 
 In `baseline_nomidd_2servers` the following naming convention applies:
 

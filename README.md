@@ -1,13 +1,12 @@
 # Advanced Systems Lab - Fall 2017
 
-#### author: Jovan Nikolic
-#### ETH Zurich, Switzerland
+author: **Jovan Nikolic**
+**ETH**, Zurich, Switzerland
 
-This repository contains code for project of Advanced System Lab course of ETH, Zurich
+This repository contains code for project of Advanced System Lab course of ETH, Zurich.
 
-##### final report available [here](https://gitlab.ethz.ch/nikolijo/asl-fall17-project/blob/master/report.pdf).
-##### project description available on link [here](https://gitlab.com/nikolijo/ASL-2017/blob/master/project20.pdf).
-
+**Final report** is available [here](https://github.com/jovan-ioanis/asl-project-2017/blob/master/report.pdf).
+**Project description** is available [here](https://github.com/jovan-ioanis/asl-project-2017/blob/master/project-description.pdf).
 
 ## Organization of data, scripts and plots
 
@@ -16,31 +15,31 @@ Size of raw data obtained from experiments is around 160GB, hence it is not uplo
 ### Organization of data
 
 In `aggregated_data` folder, data is organized per experiments in the following way:
-- `baseline_1midd` contains data from baseline experiment with 1 middleware
-- `baseline_2midd` contain data from baseline experiment with 2 middlewares
-- `baseline_2midd_2vms` contains data from repetition of experiment with 2 middlewares under write-only load with 2 client machines
-- `experiment_write-only` contains data from write-only experiments from Section 4
-- `experiment_gets` contain data from gets and multi-gets experiments from Section 5
-- `experiment_2k` contains data from experiments conducted for 2k analysis
-- `queueing theory` contains data extracted from previous experiments for input values in queueing models
-- `baseline_nomidd_1server` contains raw data from baseline without middleware with 1 server experiment
-- `baseline_nomidd_2servers` contains raw data from baseline without middleware with 2 servers experiment
+- `baseline_1midd` contains data from baseline experiment with **1 middleware**
+- `baseline_2midd` contain data from baseline experiment with **2 middlewares**
+- `baseline_2midd_2vms` contains data from repetition of experiment with **2 middlewares under write-only load with 2 client machines**
+- `experiment_write-only` contains data from **write-only** experiments from Section 4
+- `experiment_gets` contain data from **gets and multi-gets** experiments from Section 5
+- `experiment_2k` contains data from experiments conducted for **2k analysis**
+- `queueing theory` contains data extracted from previous experiments for input values in **queueing models**
+- `baseline_nomidd_1server` contains raw data from baseline **without middleware with 1 server** experiment
+- `baseline_nomidd_2servers` contains raw data from baseline **without middleware with 2 servers** experiment
 
 In `baseline_nomidd_1server` the following naming convention applies:
 
-- `json_output_file_cpt_`X`_rep`Y`_`ZZZZ`_vm`N`.json` represents output file of memtier instance, where X is number of virtual clients per thread at memtier, Y is repetition number = {1, 2, 3}, ZZZZ is `S0-G1` for read-only load and `S1-G0` for write-only load, N is virtual machine id = {1, 2, 3}.
+- `json_output_file_cpt_`**X**`_rep`**Y**`_`**ZZZZ**`_vm`**N**`.json` represents output file of memtier instance, where **X** is number of virtual clients per thread at memtier, **Y** is repetition number = {1, 2, 3}, **ZZZZ** is `S0-G1` for read-only load and `S1-G0` for write-only load, **N** is virtual machine id = {1, 2, 3}.
 
-- `dstat_`__*machine*__N`_cpt`X`_rep`Y`_`S`.csv` represents output file of `dstat` tool, where __*machine*__ = {"memtier", "memcached"}, N is id of machine instance, X is number of virtual clients per thread at memtier, Y is repetition number = {1, 2, 3} and S is "r" for read-only and "w" for write-only. Ping results are identified in similar way.
+- `dstat_`__*machine*__N`_cpt`**X**`_rep`**Y**`_`**S**`.csv` represents output file of `dstat` tool, where __*machine*__ = {"memtier", "memcached"}, **N** is id of machine instance, **X** is number of virtual clients per thread at memtier, **Y** is repetition number = {1, 2, 3} and **S** is "r" for read-only and "w" for write-only. Ping results are identified in similar way.
 
 In `baseline_nomidd_2servers` the following naming convention applies:
 
 - for `dstat` logs and ping results, convention is the same as above
 
-- `json_output_file_inst`A`_cpt`X`_rep`Y`_`ZZZZ`_vm`N`.json` represents output file of memtier clients, where A is instance id = {1, 2}, X is number of virtual clients per thread at memtier, Y is repetition number = {1, 2, 3}, ZZZZ is `S0-G1` for read-only load and `S1-G0` for write-only load, N is virtual machine id = {1, 2, 3}.
+- `json_output_file_inst`**A**`_cpt`**X**`_rep`**Y**`_`**ZZZZ**`_vm`**N**`.json` represents output file of memtier clients, where **A** is instance id = {1, 2}, **X** is number of virtual clients per thread at memtier, **Y** is repetition number = {1, 2, 3}, **ZZZZ** is `S0-G1` for read-only load and `S1-G0` for write-only load, **N** is virtual machine id = {1, 2, 3}.
 
-In `queueing_theory` folder, files `noq_1midd.txt` and `noq_2midd.txt` contain service times that are input for network of queues models with 1 and 2 middlewares, and `mm_values.ods` is Libre Office (~ MC Excel) table with sing tables for M/M/1 and M/M/m models.
+In `queueing_theory` folder, files `noq_1midd.txt` and `noq_2midd.txt` contain service times that are input for network of queues models with 1 and 2 middlewares, and `mm_values.ods` is Libre Office (~ MC Excel) table with sign tables for M/M/1 and M/M/m models.
 
-In all other folders, data is divided in `timers` and `counters` folders. In `timers` folder is aggregated time-related data like response time, server-service time, net-thread processing time and so on. The naming convention is quite clear: `timer_aggregated_data_clientThreads_`X`_workerThreads_`M`_`ZZZZ`.csv` where X is number of virtual clients per thread at memtier, M is number of workers per middleware and ZZZZ is `S0-G1` for read-only load and `S1-G0` for write-only load. Folder `counters` contains throughput aggregates and files are named similarly: `throughput_`X`_workerThreads_`M`_`ZZZZ`.csv`, where X is number of virtual clients per thread at memtier, M is number of workers per middleware and ZZZZ is `S0-G1` for read-only load and `S1-G0` for write-only load. In cases with multiple middleware instances, ID of middleware is added to the filename with tag `mw`. In `experiment_gets` folder, filename includes (human-readable) information about number of keys and if sharding is enabled.
+In all other folders, data is divided in `timers` and `counters` folders. Folder `timers` contains aggregated time-related data like response time, server-service time, net-thread processing time and so on. The naming convention is quite clear: `timer_aggregated_data_clientThreads_`**X**`_workerThreads_`**M**`_`**ZZZZ**`.csv` where **X** is number of virtual clients per thread at memtier, **M** is number of workers per middleware and **ZZZZ** is `S0-G1` for read-only load and `S1-G0` for write-only load. Folder `counters` contains throughput aggregates and files are named similarly: `throughput_`**X**`_workerThreads_`**M**`_`**ZZZZ**`.csv`, where **X** is number of virtual clients per thread at memtier, **M** is number of workers per middleware and **ZZZZ** is `S0-G1` for read-only load and `S1-G0` for write-only load. In cases with multiple middleware instances, ID of middleware is added to the filename with tag `mw`. In `experiment_gets` folder, filename includes (human-readable) information about number of keys and if sharding is enabled.
 
 ### Organization of plots
 
@@ -48,7 +47,7 @@ Plots are organized in separate folders based on experiments, and folders are na
 
 All plots are generated using `gnuplot`, and all scripts are next to the files they use for plotting.
 
-Global fgures and diagrams like flow chart, architecture of the system and illustartions of network of queues models are located directly in `plots` folder.
+Global figures and diagrams like flow chart, architecture of the system and illustartions of network of queues models are located directly in `plots` folder.
 
 ### Organization of scripts
 
